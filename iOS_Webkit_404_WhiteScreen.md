@@ -57,6 +57,12 @@ date: 2025-12-04
     3.  WebKit은 이것을 단순 "리소스 로딩 실패"가 아니라 **"비동기 컴포넌트 로딩 실패(Promise Rejection)로 처리하여 상위 컨텍스트로 던짐.
     4.  Vue Router는 **"새 페이지 로딩 실패"로 인식하여 네비게이션 프로세스를 중단(Abort)함.
     5.  이미 뷰포트는 갱신 단계에 진입하여 이전 화면을 지웠으므로, **이전 화면도 없고 새 화면도 없는 'White Screen' 상태**에 빠짐.
+    
+<img width="700" height="1200" alt="image" src="https://github.com/user-attachments/assets/5bfea2b8-2bb0-4d36-98bb-63886319a861" />
+
+출처 : https://github.com/vuejs/vue-router/issues/2184
+
+이 다이어그램에서  Resolve async route components 단계에서 문제가 발생한 것으로 추측
 
 ---
 
